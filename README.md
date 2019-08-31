@@ -1,4 +1,3 @@
 # csv-renamer
-# Written by SchwartzKamel
-# Simple python script
-Renames CSV files in any specified directory.
+Simple script in python that renames CSV files in any specified directory.
+(work in progress)
