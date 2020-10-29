@@ -1,16 +1,15 @@
 #! python3
 # fileRename.py - Adds a date prefix in mmddyy format to files in a specified directory
-import glob, os
+import glob
+import os
+import datetime
 
-# path for the script to work in, just change it to suit your needs
-os.chdir('C:\\Users\\tweber\\Downloads\\PowerBI')
+print('Enter the path of your files.')
+fpath = input()
+os.chdir(fpath)
 
-# gets the date to add in front of the filename
-print('Enter the date you wish in mmddyy format')
-date = input()
+today = datetime.date.today()
 
-# adds the date prefix
-for f in glob.glob('*.csv'):
-	new_filename = f.replace(" ","_")
-	new_filename = date + new_filename
-	os.rename(f,new_filename)
+for f in glob.glob('*.*'):
+    filename, file_extension = os.path.splitext(f)
+    os.rename(f, filename + " " + today.strftime('%m%d%y') + file_extension)
