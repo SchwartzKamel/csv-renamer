@@ -1,5 +1,5 @@
 #! python3
-# fileRename.py - Adds a date prefix in mmddyy format to files in a specified directory
+# fileRename.py - Adds a datestamp in mmddyy format to files in a specified directory
 import glob
 import os
 import datetime
